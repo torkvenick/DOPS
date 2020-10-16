@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr-Medium';
+  src: url(../fonts/HelveticaNeueCyr-Medium.woff2) format('woff2'),
+       url(../fonts/HelveticaNeueCyr-Medium.woff) format('woff'),
+       url(../fonts/HelveticaNeueCyr-Medium.ttf) format('truetype');
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, 
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'HelveticaNeueCyr-Medium', sans-serif;
+  font-weight: 550;
+}
+
+.container-fluid {
+  width: 100%; 
+  min-height: 100px; 
+  background-color: #e5e5e5;
+}
+
+.header__inner,
+.footer__inner {
+  margin: 0 auto;
+  display: flex;
+  padding: 28px 0;
+}
+
+.header__inner {
+  /* Ширину задавал только шапке, чтобы получилось выровнять футер, иначе футеру приходится margin по 200-400px в стороны задавать для выравнивания иконок */
+  max-width: 1530px;
+  justify-content: space-between;
+}
+
+.icon-top--left {
+  margin-left: 4px; 
+}
+
+.footer__inner {
+  justify-content: space-around;
+}
+
+.icon-bottom--left {
+  margin-right: 43px;
+}
+
+.icon-bottom--right {
+  margin-left: 43px;
+}
+
+.icon {
+  transition: opacity .3s;
+}
+
+.icon:hover {
+  opacity: 0.5;
+}
+
+.container {
+  max-width: 1530px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+.main__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 900px;
+}
+
+.block {
+  display: flex;
+}
+
+.block--top {
+  align-self: flex-start;
+  margin-left: 80px;
+}
+
+.block--mid {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.block--bottom {
+  align-self: flex-end;
+  margin-right: 80px;
+  text-align: right;
+}
+
+.column {
+  max-width: 140px;
+}
+
+.column + .column {
+  margin-left: 20px;
+}
+
+.btn {
+  
+  /* раньше убрал border, чтоб сбить настройку по умолчанию, но теперь поставил прозрачный, а там где нужно добавил цвет. Всё. */
+  border: 1px solid transparent;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  outline-style: none;
+  /* transition задаем только тому параметру, который хотим изменить */
+  transition: box-shadow 0.3s;
+  /* Сюда еще можно задать паддинги и вообще - создать одну кнопку для всех, дабы уменшить код и модифицировать при необходимости лишь остальные кнопки*/
+}
+
+/* Порядок применения состояний: сначала HOVER, чтобы при наведении появлялась тень. Если его поставить ниже других состояний, он будет в приоритете и показываться только после них, что нам не нужно */
+.btn:hover {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* дальше идет FOCUS, чтобы отображаться после того, как мы закончили клик. Это нужно для отображения ACTIVE */
+.btn:focus {
+  /* Сначала я сделал вот так: радиус для сглаживания углов, а внутренняя тень для соответствия ТЗ, но после увидел, что размеры блока не меняются при изменении состояний. Но вопрос остался: можно сделать так, как на этих двух строчках? Это позволило не прописывать фокус каждому блоку отдельно.
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5); */
+}
+
+.btn--big {
+  border-radius: 3px;
+  padding: 14px 40px 12px 42px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.btn--mid {
+  padding: 11px 29px 9px 31px;
+  font-size: 12px;
+  margin: 17px 0;
+  line-height: 12px;
+}
+
+/* Если у блоков ниже не уменьшить вертикальные отступы на 2px, блок становится заметно ниже основного ряда из-за своего бордера */
+/* .btn--mid.btn--white,
+.btn--mid.btn--grey {
+  padding: 10px 29px 8px 31px;
+} */
+
+.btn--sm {
+  padding: 8px 19px 6px 20px;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.btn--blue {
+  background-color: rgb(0, 169, 255);
+}
+
+.btn--blue:focus {
+  box-shadow: 0px 0px 0px 3px rgba(0, 169, 255, 0.3);
+}
+
+.btn--green {
+  background-color: rgb(107, 216, 46);
+}
+
+.btn--green:focus {
+  box-shadow: 0px 0px 0px 3px rgba(107, 216, 46, 0.3);
+}
+
+.btn--orange {
+  background-color: rgb(255, 154, 0);
+}
+
+.btn--orange:focus {
+  box-shadow: 0px 0px 0px 3px rgba(255, 154, 0, 0.3);
+}
+
+.btn--red {
+  background-color: rgb(255, 67, 69);
+}
+
+.btn--red:focus {
+  box-shadow: 0px 0px 0px 3px rgba(255, 67, 69, 0.3);
+}
+
+.btn--white {
+  background-color: rgb(255, 255, 255);
+  border-color:#D2CECE; /* параметры бордера перенесли в .btn */
+  color: #000;
+}
+
+.btn--white:focus {
+  box-shadow: 0px 0px 0px 3px rgba(0,0,0,0.1);
+}
+
+.btn--grey {
+  background-color: rgb(249, 249, 249);
+  border-color:#D2CECE; /* параметры бордера перенесли в .btn */
+  color: #9B9B9B;
+}
+
+.btn--grey:focus {
+  box-shadow: 0px 0px 0px 3px rgba(0,0,0,0.2);
+}
+
+/* ACTIVE идет последним в этой цепочке, дабы состояния передавались правильно: навел на кнопку - тень; нажал - внутренняя тень; отпустил - полупрозрачный фокус */
+.btn:active {
+  box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
