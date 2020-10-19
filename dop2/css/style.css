@@ -18,17 +18,20 @@ html {
   box-sizing: inherit;
 }
 
+body,
 .header,
+.nav,
 .footer {
   margin: 0 auto;
+}
+
+.header,
+.footer {
   max-width: 1000px;
-  min-height: 150px;
-  padding-top: 40px;
 }
 
 body {
   background-color: #1976D5;
-  margin: 0 auto;
   max-width: 1280px;
   font-family: 'Roboto-Regular', sans-serif;
   font-weight: 400;
@@ -41,11 +44,13 @@ body {
 
 .header {
   background-color: #C1C1C1;
+  padding: 40px 0;
   line-height: 100%;
+  margin-bottom: 20px;
 }
 
 .nav {
-  margin: 20px auto;
+  margin-bottom: 20px;
   padding: 2px 0 3px;
   background-color: #EB1E63;
   max-width: 1000px;
@@ -56,23 +61,21 @@ body {
   background-color: #3A3E47;
   display: inline-block;
   max-width: 360px;
-  min-height: 600px;
-  padding: 21px 20px 0;
   line-height: 100%;
+  padding: 21px 20px 30px;
 }
 
 .figure {
   background-color: #637B8B;
   margin: 0;
-  padding-top: 17px;
-  min-height: 480px;
+  padding: 19px 20px 28px;
 }
 
 .image {
   background-color: #85D32C;
-  margin: 14px 20px 28px;
-  padding: 5px 76px 0;
   min-height: 350px;
+  margin-top: 12px;
+  padding: 5px 76px 0;
 }
 
 .main,
@@ -86,21 +89,15 @@ body {
   vertical-align: top;
   display: inline-block;
   max-width: 620px;
-  min-height: 600px;
-  line-height: 79px;
-  padding: 11px 20px 0;
+  padding: 11px 20px 20px;
   margin-bottom: 20px;
-}
-
-.section,
-.article {
-  min-height: 235px;
-  padding-top: 82px;
 }
 
 .section {
   background-color: #FFC10A;
-  margin-bottom: 20px;
+  padding: 82px 0 15px;
+  display: inline-block;
+  vertical-align: 27px;
 }
 
 .button {
@@ -117,10 +114,13 @@ body {
 
 .article {
   background-color: #FF800A;
+  padding: 82px 0 71px;
 }
 
 .footer {
   background-color: #000;
+  padding: 40px 0 28px;
+  margin: 0 auto;
 }
 
 
