@@ -91,13 +91,14 @@ body {
   max-width: 620px;
   padding: 11px 20px 20px;
   margin-bottom: 20px;
+  line-height: 79px;
 }
 
 .section {
   background-color: #FFC10A;
   padding: 82px 0 15px;
   display: inline-block;
-  vertical-align: 27px;
+  vertical-align: 35px;
 }
 
 .button {
@@ -114,7 +115,7 @@ body {
 
 .article {
   background-color: #FF800A;
-  padding: 82px 0 71px;
+  padding: 82px 0 74px;
 }
 
 .footer {
