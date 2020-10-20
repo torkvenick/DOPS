@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+
   <header class="header">
     <div class="container">
-      <div class="header__top">
-        <div class="header__info">
-          <ul>
-            <li>About us</li>
-            <li>Help</li>
-            <li>FAQ</li>
+        <div class="header__top">
+          <ul class="header__info">
+            <li class="header__info-item">
+              <a class="header__info-link" href="#">About us</a>
+            </li>
+            <li class="header__info-item">
+              <a class="header__info-link" href="#">Help</a>
+            </li>
+            <li class="header__info-item">
+              <a class="header__info-link" href="#">FAQ</a>
+            </li>
           </ul>
-          <a class="header__login" href="#">Login</a>
+          <div class="login">
+            <a class="login-link" href="#">Login</a>
+          </div>
         </div>
-      </div>
-      <div class="header__inner">
-        <div class="header__logo" style="background-image: url(../dop5/images/logo.png);"></div>
-        <div class="header__slogan">Place for your slogan</div>
-        <ul>
-          <li>Products</li>
-          <li>Services</li>
-          <li>Portfolio</li>
-          <li>News</li>
-        </ul>
-      </div>
+
+        <div class="header__inner">
+          <div class="header__logo">
+            <a class="logo">
+              <img src="images/logo.png" alt="logo">
+            </a>
+            <p class="header__slogan">Place for your slogan</p>
+          </div>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Products</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Services</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Portfolio</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">News</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
     </div>
   </header>
 
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
