@@ -73,7 +73,7 @@ li {
 }
 
 .header__info-item + .header__info-item {
-  margin-left: 39px;
+  margin-left: 40px;
 }
 
 .header__info-link {
@@ -83,31 +83,29 @@ li {
 }
 
 .login {
-  padding-top: 17px;
-  padding-left: 30px;
-}
+  margin: 16px 0px 2px 29px;
+  padding: 2px 14px 0 36px;
 
-.login-link {
-  padding: 5px 15px 6px 36px;
-  border: 1px solid #D2CECE;
-  background-color: #F9F9F9;
-  border-radius: 2px;
   font-family: 'HelveticaNeueCyr-Medium';
   font-size: 10px;
   line-height: 10px;
-  text-transform: uppercase;
   color: #9B9B9B;
-
+  text-transform: uppercase;
+  
+  background-color: #F9F9F9;
+  border: 1px solid #D2CECE;
+  border-radius: 2px;
   position: relative;
+  cursor: pointer;
 }
 
-.login-link::before {
+.login::before {
   content: url(../images/user-icon.svg);
   position: absolute;
   width: 10px;
   height: 14px;
-  left: 19px;
-  bottom: 4px;
+  left: 18px;
+  bottom: 3px;
 }
 
 .header__inner {
