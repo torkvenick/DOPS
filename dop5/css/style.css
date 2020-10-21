@@ -179,9 +179,8 @@ li {
 }
 
 .swiper__link {
-  width: 40px;
-  height: 14px;
-  padding: 13px 37px;
+  display: inline-block;
+  padding: 13px 41px;
   font-family: 'HelveticaNeueCyr-Medium';
   font-size: 14px;
   line-height: 14px;
@@ -201,12 +200,16 @@ li {
 .swiper-pagination-bullets > .swiper-pagination-bullet {
   width: 70px;
   height: 10px;
-  background: black;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 0;
 }
 
-.swiper-pagination-bullets .swiper-pagination-bullet + .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin-left: 10px !important;
+.swiper-slide-bullet-active {
+  background-color: #00A9FF;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin: 0 0 0 10px !important;
 }
 /* Swiper */
 
