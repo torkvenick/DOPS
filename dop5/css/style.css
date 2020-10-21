@@ -150,6 +150,10 @@ li {
 
 /* Swiper */
 
+.main {
+  margin-bottom: 132px;
+}
+
 .swiper-container {
   height: 700px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 4.5e-05) 0%, rgba(0, 0, 0, 0.45) 100%);
@@ -181,35 +185,45 @@ li {
 .swiper__link {
   display: inline-block;
   padding: 13px 41px;
+
+  text-align: center;
+  text-transform: uppercase;
   font-family: 'HelveticaNeueCyr-Medium';
   font-size: 14px;
   line-height: 14px;
+  color: #fff;
+
   background-color: #00A9FF;
   border-radius: 3px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
+  cursor: pointer;
 }
 
-.swiper-pagination-bullets {
-  bottom: 56px !important; 
-  /* не удалось перебить приоритет. Пробовал и от родителя к ребенку и все классы вместе - не помогло*/
-  left: 14px !important;
+.swiper-container>.swiper-pagination.swiper-pagination-bullets {
+  bottom: 56px; 
+  left: 14px;
 }
 
 .swiper-pagination-bullets > .swiper-pagination-bullet {
   width: 70px;
   height: 10px;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 0;
 }
 
-.swiper-slide-bullet-active {
-  background-color: #00A9FF;
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #00A9FF;
 }
 
-.swiper-pagination-bullet + .swiper-pagination-bullet {
-  margin: 0 0 0 10px !important;
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin: 0 0 0 10px;
 }
 /* Swiper */
 
+/* Footer */
+
+.footer {
+  background-color: #4A4A4A;
+  min-height: 100px;
+}
+
+/* Footer */
