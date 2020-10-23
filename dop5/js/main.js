@@ -6,6 +6,9 @@ var mySwiper = new Swiper('.swiper-container', {
     delay: 3000,
     disableOnInteraction: false,
   },
+  keyboard: {
+    enabled: true,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
