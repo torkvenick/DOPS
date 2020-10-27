@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  background-color: rgba(41, 183, 240, 0.7);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(204, 204, 204, 0.5);
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0 15px;
+  color: aliceblue;
+}
+
+.article { 
+  margin: 0 auto;
+  background-size: contain;
+}
