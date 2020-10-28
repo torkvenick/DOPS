@@ -204,17 +204,16 @@ li {
 }
 
 .swiper-slide {
-  max-width: 100vw;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .swiper__block {
   position: absolute;
-  width: 600px;
-    height: 150px;
-    left: 319px;
-    bottom: 312px;
+  max-width: 560px;
+  height: 150px;
+  left: 17%;
+  bottom: 45%;
 }
 
 .swiper__title {
