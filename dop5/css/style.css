@@ -224,6 +224,12 @@ li {
   letter-spacing: 2px;
   color: #FFFFFF;
   margin-bottom: 40px;
+} 
+
+@media (max-width: 767px) {
+  .swiper__title {
+    font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1905));
+  }
 }
 
 .swiper__link {
