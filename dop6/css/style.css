@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr-UltraLight';
+  src: url(../fonts/HelveticaNeueCyr-UltraLight.woff2) format('woff2'),
+       url(../fonts/HelveticaNeueCyr-UltraLight.woff) format('woff'),
+       url(../fonts/HelveticaNeueCyr-UltraLight.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: url(../fonts/HelveticaNeueCyr-Light.woff2) format('woff2'),
+       url(../fonts/HelveticaNeueCyr-Light.woff) format('woff'),
+       url(../fonts/HelveticaNeueCyr-Light.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Medium';
+  src: url(../fonts/HelveticaNeueCyr-Medium.woff2) format('woff2'),
+       url(../fonts/HelveticaNeueCyr-Medium.woff) format('woff'),
+       url(../fonts/HelveticaNeueCyr-Medium.ttf) format('truetype');
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Bold';
+  src: url(../fonts/HelveticaNeueCyr-Bold.woff2) format('woff2'),
+       url(../fonts/HelveticaNeueCyr-Bold.woff) format('woff'),
+       url(../fonts/HelveticaNeueCyr-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url(../fonts/OpenSans-Regular.woff2) format('woff2'),
+       url(../fonts/OpenSans-Regular.ttf.woff) format('woff'),
+       url(../fonts/OpenSans-Regular.ttf.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url(../fonts/HelveticaNeue.woff2) format('woff2'),
+       url(../fonts/HelveticaNeue.woff) format('woff'),
+       url(../fonts/HelveticaNeue.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
