@@ -63,3 +63,70 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+.header__wrapper {
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 944px;
+}
+
+.header__inner {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-top: 29px;
+}
+
+.menu__items {
+  display: flex;
+  padding: 51px 0;
+  margin: 0;
+  font-family: 'HelveticaNeueCyr-Medium';
+  text-transform: uppercase;
+  color: #00A9FF;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.menu__item + .menu__item {
+  margin-left: 39px;
+}
+
+.search__content {
+  position: relative;
+}
+
+.search__content-field {
+  margin: 40px 0;
+  padding: 7px 0 7px 20px;
+  width: 360px;
+  font-family: 'OpenSans-Regular';
+  border: 2px solid #1EBFFA;
+  border-radius: 4px;
+  line-height: 16px;
+}
+
+.search__content-field::placeholder {
+  color: #00A9FF;
+  font-size: 16px;  
+}
+
+.search__content-icon {
+  position: absolute;
+  background: none;
+  border: none;
+  top: 45px;
+  right: 14px;
+}
