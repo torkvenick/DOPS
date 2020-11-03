@@ -1,16 +1,17 @@
-var mySwiper = new Swiper('.swiper-container', {
- 
+var swiper = new Swiper('.swiper-container', {
+
   loop: true,
-  effect: 'fade',
-  autoplay: {
+  slidesPerView: 4,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+/*   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
-  },
+  }, */
+  spaceBetween: 30,
   keyboard: {
     enabled: true,
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-})
+});

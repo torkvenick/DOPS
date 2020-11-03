@@ -69,16 +69,17 @@ ul, li {
 }
 
 body {
-  background-color: #fff;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-size: 100%;
+  background: url(../images/workspace.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* HEADER */
+
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 .header__inner {
   margin: 0 auto;
@@ -140,30 +141,98 @@ body {
 /* BLOCK */
 
 .block {
-  max-width: 775px;
+  min-height: 824px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 140px;
+}
+
+.block__inner {
+  max-width: 41%;
+  margin-left: 17%;
 }
 
 .block__title {
-  font-family: 'HelveticaNeueCyr-UltraLight';
+  font-family: 'HelveticaNeueCyr-Light';
   font-size: 60px;
   line-height: 72px;
+  text-align: justify;
   color: #00A9FF;
+  margin-bottom: 30px;
 }
 
 .block__text {
-  font-family: 'HelveticaNeueCyr-Light';
-  text-align: justify;
+  font-family: 'HelveticaNeueCyr-Light', sans-serif;
   font-size: 24px;
   line-height: 36px;
   color: #353535;
+  margin-bottom: 42px;
+
+  letter-spacing: 1px;
 }
 
-.button {
-  font-family: 'HelveticaNeue';
-  text-transform: uppercase;
-  color: #fff;
+.block__button {
+  border: transparent;
+  
+  background: #00A9FF;
+  border-radius: 2px;
+  font-family: 'HelveticaNeue', sans-serif;
   font-size: 14px;
   line-height: 17px;
+  color: #fff;
+  padding: 12px 29px;
+  text-transform: uppercase;
 }
 
 /* BLOCK */
+
+/* PRODUCTS */
+
+.products__inner {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 48px;
+}
+
+.products__title {
+  font-family: 'HelveticaNeueCyr-Light';
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #353535;
+  font-weight: 300;
+}
+
+.products__link {
+  font-family: 'HelveticaNeueCyr-Light';
+  font-size: 24px;
+  line-height: 24px;
+  color: #00A9FF;
+  letter-spacing: 2px;
+  text-decoration-line: underline;
+  vertical-align: middle;
+}
+
+.swiper-container {
+  max-width: 1530px;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.swiper-slide {
+  width: 360px;
+  height: 414px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+}
+
+.swiper__img {
+  display: flex;
+  justify-content: center;
+}
+
+/* PRODUCTS */
