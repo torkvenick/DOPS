@@ -68,6 +68,10 @@ ul, li {
   list-style: none;
 }
 
+a {
+ text-decoration: none;
+}
+
 body {
   background: url(../images/workspace.png);
   background-repeat: no-repeat;
@@ -188,6 +192,10 @@ body {
 
 /* PRODUCTS */
 
+.products {
+  margin-bottom: 141px;
+}
+
 .products__inner {
   display: flex;
   justify-content: space-between;
@@ -204,6 +212,7 @@ body {
 
 .products__link {
   padding-top: 18px;
+  text-decoration: underline;
   font-family: 'HelveticaNeueCyr-Light';
   font-size: 24px;
   line-height: 24px;
@@ -228,8 +237,8 @@ body {
 }
 
 .swiper-slide {
-  max-width: 358px;
-  height: 414px;
+  max-width: 358px; /* без приставки max крайний правый блок лишался бордера справа */
+  min-height: 414px;
   background: #FFFFFF;
   background-clip: padding-box;
   border: 1px solid #D9D9D9;
@@ -242,6 +251,7 @@ body {
   justify-content: center;
   padding: 31px 0;
   border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 32px;
 }
 
 .swiper__item-name {
@@ -278,6 +288,12 @@ body {
   border-radius: 50%;
 }
 
+.swiper-button-prev:focus, 
+.swiper-button-next:focus {
+  outline: transparent;
+  box-shadow:0px 0px 5px 7px rgba(219,214,214,1);
+}
+
 .swiper-button-prev {
   left: 54px;
 }
@@ -295,3 +311,86 @@ body {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 /* PRODUCTS */
+
+
+
+
+/* SUBSCRIBE */
+
+.subs__inner {
+  min-height: 335px;
+  background: linear-gradient(270deg, #00A9FF 27.66%, #1EBFFA 77.14%), #C4C4C4;
+}
+
+.subs__title {
+  text-align: center;
+  padding-top: 90px;
+  font-family: 'HelveticaNeueCyr-Medium';
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  margin-bottom: 48px;
+}
+
+.form-subs {
+  text-align: center;
+}
+
+.form-subs__email {
+  max-width: 360px;
+  width: 100%;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 19px 0 19px 20px;
+}
+
+.form-subs__email::placeholder {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.form-subs__submit {
+  max-width: 360px;
+  width: 100%;
+  margin-left: 31px;
+  padding: 20px 0;
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+  font-family: 'HelveticaNeueCyr-Light', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #00A9FF;
+}
+
+/* SUBSCRIBE */
+
+
+
+/* FOOTER */
+
+.footer__inner {
+  display: flex;
+  justify-content: center;
+  padding: 68px 0;
+}
+
+.footer__link {
+  width: 100px;
+  height: 100px;
+  padding: 25px 0;
+  background-color: #1EBFFA;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.footer__link + .footer__link {
+  margin-left: 30px;
+}
+
+/* FOOTER */
