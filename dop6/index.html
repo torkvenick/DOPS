@@ -52,7 +52,7 @@
           One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
           vermin.
         </div>
-        <button class="block__button">Try it free</button>
+        <button class="block__button" type="button">Try it free</button>
       </div>
     </section>
   </div>
@@ -60,7 +60,7 @@
   <main class="main">
     <section class="products">
       <div class="container">
-        <div class="products__inner">          
+        <div class="products__inner">
           <div class="products__title">
             Our products
           </div>
@@ -68,9 +68,11 @@
             View all products
           </a>
         </div>
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+        <div class="products__swiper"> <!-- обертка создана для отображения кнопок за пределами контейнера, иначе они прячутся -->
+
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
                 <a class="swiper__img" href="#">
@@ -80,43 +82,59 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
+                <button class="swiper-slide__button">Buy</button>
               </div>
 
               <div class="swiper-slide">
-                 <a class="swiper__img" href="#">
+                <a class="swiper__img" href="#">
                   <img src="images/content/item-2.png" alt="item-1">
                 </a>
                 <h3 class="swiper__item-name">Macbook</h3>
                 <p class="swiper__price">
                   $ 1 499
                 </p>
+                <button class="swiper-slide__button">Buy</button>
               </div>
 
               <div class="swiper-slide">
-                 <a class="swiper__img" href="#">
+                <a class="swiper__img" href="#">
                   <img src="images/content/item-3.png" alt="item-1">
                 </a>
                 <h3 class="swiper__item-name">Macbook</h3>
                 <p class="swiper__price">
                   $ 1 499
                 </p>
+                <button class="swiper-slide__button">Buy</button>
               </div>
 
               <div class="swiper-slide">
-                 <a class="swiper__img" href="#">
+                <a class="swiper__img" href="#">
                   <img src="images/content/item-4.png" alt="item-1">
                 </a>
                 <h3 class="swiper__item-name">Macbook</h3>
                 <p class="swiper__price">
                   $ 1 499
                 </p>
+                <button class="swiper-slide__button">Buy</button>
               </div>
 
+              <div class="swiper-slide">
+                <a class="swiper__img" href="#">
+                  <img src="images/content/item-1.png" alt="item-1">
+                </a>
+                <h3 class="swiper__item-name">Macbook</h3>
+                <p class="swiper__price">
+                  $ 1 499
+                </p>
+                <button class="swiper-slide__button">Buy</button>
+              </div>
+
+            </div>       
           </div>
-          <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
+
     </section>
   </main>
 
