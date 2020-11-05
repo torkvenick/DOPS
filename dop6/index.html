@@ -26,19 +26,34 @@
 
           <nav class="menu">
             <ul class="menu__items">
-              <li class="menu__item">Home</li>
-              <li class="menu__item">Products</li>
-              <li class="menu__item">Blog</li>
-              <li class="menu__item">About us</li>
-              <li class="menu__item">Contacts</li>
+              <li class="menu__item">
+                <a class="menu__item-link menu__item-link--active" href="#">Home</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Products</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">About us</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Contacts</a>
+              </li>
             </ul>
           </nav>
 
           <form class="search__content">
             <input class="search__content-field" type="search" name="search" id="search" placeholder="Search">
-            <button class="search__content-icon">
-              <img src="images/search-icon.svg" alt="search-icon">
-            </button>
+            <a class="search__content-icon" href="#">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.3575 7.32486C20.1399 10.1073 20.1291 14.6291 17.3334 17.4248C14.5376 20.2206 10.0158 20.2314 7.23338 17.449C4.45096 14.6665 4.46175 10.1447 7.25748 7.34896C10.0532 4.55324 14.5751 4.54245 17.3575 7.32486Z"
+                  stroke-width="2.72727" />
+                <path d="M17.3334 17.4247L20.6762 20.7675" stroke-width="2.72727" stroke-linecap="round" />
+              </svg>
+            </a>
           </form>
 
         </div>
@@ -70,7 +85,8 @@
             View all products
           </a>
         </div>
-        <div class="products__swiper"> <!-- обертка создана для отображения кнопок за пределами контейнера, иначе они прячутся -->
+        <div class="products__swiper">
+          <!-- обертка создана для отображения кнопок за пределами контейнера, иначе они прячутся -->
 
           <div class="swiper-container">
             <!-- Additional required wrapper -->
@@ -84,7 +100,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -95,7 +111,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -106,7 +122,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -117,7 +133,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -128,7 +144,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -139,7 +155,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -150,7 +166,7 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
               <div class="swiper-slide">
@@ -161,10 +177,10 @@
                 <p class="swiper__price">
                   $ 1 499
                 </p>
-                <button class="swiper-slide__button">Buy</button>
+                <a class="swiper-slide__link" href="#">Buy</a>
               </div>
 
-            </div>       
+            </div>
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -191,13 +207,13 @@
     <div class="container">
       <div class="footer__inner">
         <a class="footer__link" href="#">
-          <img src="images/twitter.svg" alt="twitter">
+          <img class="footer__link-icon" src="images/twitter.svg" alt="twitter">
         </a>
         <a class="footer__link" href="#">
-          <img src="images/fb.svg" alt="fb">
+          <img class="footer__link-icon" src="images/fb.svg" alt="fb">
         </a>
         <a class="footer__link" href="#">
-          <img src="images/instagram.svg" alt="instagram">
+          <img class="footer__link-icon" src="images/instagram.svg" alt="instagram">
         </a>
       </div>
     </div>

@@ -96,6 +96,11 @@ body {
 
 .header__logo {
   margin-top: 29px;
+  transition: all 0.3s ;
+}
+
+.header__logo:hover {
+  transform: scale(1.1);
 }
 
 .menu__items {
@@ -104,13 +109,29 @@ body {
   margin: 0;
   font-family: 'HelveticaNeueCyr-Medium';
   text-transform: uppercase;
-  color: #00A9FF;
   font-size: 14px;
   line-height: 18px;
 }
 
 .menu__item + .menu__item {
   margin-left: 39px;
+}
+
+.menu__item-link {
+  color: #00A9FF;
+}
+
+.menu__item-link:hover {
+  text-decoration-line: underline;
+}
+
+.menu__item-link:active {
+  text-decoration: none;
+  color: #0080FF;
+}
+
+.menu__item-link--active {
+  color: #0080FF;
 }
 
 .search__content {
@@ -127,6 +148,13 @@ body {
   line-height: 16px;
 }
 
+.search__content-field:focus,
+.search__content-field:active {
+  outline: transparent;
+  border-color: #0080FF;
+}
+
+.search__content-field, 
 .search__content-field::placeholder {
   color: #00A9FF;
   font-size: 16px;  
@@ -135,14 +163,23 @@ body {
 .search__content-icon {
   position: absolute;
   background: none;
-  border: none;
+  /* border: none; */
   top: 45px;
   right: 14px;
   transition: 0.3s;
+  cursor: pointer;
+  stroke: #1EBFFA;
 }
 
 .search__content-icon:hover {
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.search__content-icon:focus,
+.search__content-icon:active {
+  outline: transparent;
+  border: transparent;
+  stroke: #0080FF;
 }
 
 /* HEADER */
@@ -191,6 +228,21 @@ body {
   color: #fff;
   padding: 12px 29px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.block__button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  
+}
+
+.block__button:focus {
+  outline: transparent;
+  border: transparent;
+  box-shadow: 0px 0px 7px 0px rgba(0, 169, 255, 1);
+}
+
+.block__button:active {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* BLOCK */
@@ -223,6 +275,15 @@ body {
   line-height: 24px;
   color: #00A9FF;
   letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.products__link:hover {
+  text-decoration-line: none;
+}
+
+.products__link:active {
+  color: #0080FF;
 }
 
 /* Если кнопки не видны при выносе за пределы контейнера, тогда добавьте дополнительную обёртку для Swiper с добавлением position: relative и вложите кнопки и сам Swiper в этот контейнер. По дефолту кнопки навигации имеют абсолютное позиционирование и если не менять стили, нужно чтобы у них был родитель с position: relative для адекватного отображения. А дальше останется только настроить положение кнопок и всё.  */
@@ -242,13 +303,23 @@ body {
 }
 
 .swiper-slide {
-  max-width: 358px; /* без приставки max крайний правый блок лишался бордера справа */
+  max-width: 358px; /* без приставки max блоки становятся на 2 пикселя шире за счет бордера и крайний правый блок прячет правый бордер */
   min-height: 414px;
   background: #FFFFFF;
   background-clip: padding-box;
   border: 1px solid #D9D9D9;
   border-radius: 3px;
   text-align: center;
+}
+
+.swiper-slide,
+.swiper__img {
+  transition: border 0.3s;
+}
+
+.swiper-slide:hover,
+.swiper__img:hover {
+  border-color:#1EBFFA;
 }
 
 .swiper__img {
@@ -273,16 +344,28 @@ body {
   color: #353535;
 }
 
-.swiper-slide__button {
+.swiper-slide__link {
   text-transform: uppercase;
   padding: 9px 31px;
   background-color: #00A9FF;
-  border: transparent;
   border-radius: 2px;
   font-family: 'HelveticaNeue', sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.swiper-slide__link:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-slide__link:focus {
+  border: 3px solid rgba(0, 169, 255, 0.4);
+}
+
+.swiper-slide__link:active {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .swiper-button-prev, 
@@ -398,5 +481,15 @@ body {
 .footer__link + .footer__link {
   margin-left: 30px;
 }
+
+.footer__link-icon {
+  opacity: 0.8;
+}
+
+.footer__link-icon:hover {
+  opacity: 1;
+}
+
+
 
 /* FOOTER */
