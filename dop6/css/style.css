@@ -72,16 +72,17 @@ a {
  text-decoration: none;
 }
 
-body {
-  background: url(../images/workspace.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 /* HEADER */
 
 .wrapper {
-  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 133px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-opacity {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -91,7 +92,6 @@ body {
   justify-content: space-around;
   padding: 0 30px;
   background: rgba(255, 255, 255, 0.8);
-  background-size: 100%;
 }
 
 .header__logo {
@@ -119,33 +119,38 @@ body {
 
 .menu__item-link {
   color: #00A9FF;
+  /* transition не выставил, так как даже при нем подчеркивание при ховере появляется резко*/
 }
+
 
 .menu__item-link:hover {
   text-decoration-line: underline;
 }
 
+.menu__item-link--active,
 .menu__item-link:active {
   text-decoration: none;
   color: #0080FF;
 }
 
-.menu__item-link--active {
-  color: #0080FF;
-}
-
 .search__content {
   position: relative;
+  width: 19%;
 }
 
 .search__content-field {
+  width: 100%;
   margin: 40px 0;
-  padding: 7px 0 7px 20px;
-  width: 360px;
+  padding: 7px 50px 7px 20px;
   font-family: 'OpenSans-Regular';
   border: 2px solid #1EBFFA;
   border-radius: 4px;
   line-height: 16px;
+  overflow: hidden;
+}
+
+.search__content-field::-webkit-search-cancel-button {
+  display: none;
 }
 
 .search__content-field:focus,
@@ -157,7 +162,7 @@ body {
 .search__content-field, 
 .search__content-field::placeholder {
   color: #00A9FF;
-  font-size: 16px;  
+  font-size: 16px; 
 }
 
 .search__content-icon {
@@ -173,6 +178,7 @@ body {
 
 .search__content-icon:hover {
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  stroke: #00A9FF;
 }
 
 .search__content-icon:focus,
@@ -186,25 +192,25 @@ body {
 
 /* BLOCK */
 
-.block {
+.block__inner {
   min-height: 824px;
   display: flex;
   align-items: center;
-  margin-bottom: 140px;
 }
 
-.block__inner {
+.block__item {
   max-width: 41%;
   margin-left: 17%;
+  margin-bottom: 140px;
 }
 
 .block__title {
   font-family: 'HelveticaNeueCyr-Light';
-  font-size: 60px;
+  font-size: calc(46px + 14 * (100vw / 1905));
   line-height: 72px;
   text-align: justify;
   color: #00A9FF;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .block__text {
@@ -212,9 +218,8 @@ body {
   font-size: 24px;
   line-height: 36px;
   color: #353535;
-  margin-bottom: 42px;
-
-  letter-spacing: 1px;
+  word-spacing: 6px;
+  margin-bottom: 34px;
 }
 
 .block__button {
@@ -226,7 +231,7 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: #fff;
-  padding: 12px 29px;
+  padding: 12px 27px;
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -250,13 +255,13 @@ body {
 /* PRODUCTS */
 
 .products {
-  margin-bottom: 141px;
+  margin-bottom: 137px;
 }
 
 .products__inner {
   display: flex;
   justify-content: space-between;
-  margin: 0 10% 48px;
+  margin-bottom: 48px;
 }
 
 .products__title {
@@ -268,7 +273,7 @@ body {
 }
 
 .products__link {
-  padding-top: 18px;
+  padding-top: 25px;
   text-decoration: underline;
   font-family: 'HelveticaNeueCyr-Light';
   font-size: 24px;
@@ -325,7 +330,7 @@ body {
 .swiper__img {
   display: flex;
   justify-content: center;
-  padding: 31px 0;
+  padding: 30px 0;
   border-bottom: 1px solid #D9D9D9;
   margin-bottom: 32px;
 }
@@ -370,6 +375,7 @@ body {
 
 .swiper-button-prev, 
 .swiper-button-next { 
+  top: 42%;
   height: 90px;
   width: 90px;
   border: 1px solid rgb(217, 217, 217);
@@ -383,11 +389,11 @@ body {
 }
 
 .swiper-button-prev {
-  left: 54px;
+  left: 66px;
 }
 
 .swiper-button-next {
-  right: 54px;
+  right: 66px;
 }
 
 .swiper-button-prev:after,
@@ -412,12 +418,12 @@ body {
 
 .subs__title {
   text-align: center;
-  padding-top: 90px;
+  padding-top: 82px;
   font-family: 'HelveticaNeueCyr-Medium';
   font-size: 48px;
   letter-spacing: 2px;
   color: #FFFFFF;
-  margin-bottom: 48px;
+  margin-bottom: 47px;
 }
 
 .form-subs {
@@ -425,12 +431,12 @@ body {
 }
 
 .form-subs__email {
-  max-width: 360px;
+  max-width: 359px;
   width: 100%;
   border: 2px solid #FFFFFF;
   border-radius: 4px;
   background-color: transparent;
-  padding: 19px 0 19px 20px;
+  padding: 17px 0 17px 20px;
 }
 
 .form-subs__email,
@@ -442,9 +448,9 @@ body {
 }
 
 .form-subs__submit {
-  max-width: 360px;
+  max-width: 359px;
   width: 100%;
-  margin-left: 31px;
+  margin-left: 30px;
   padding: 20px 0;
   background-color: #FFFFFF;
   border: 2px solid #FFFFFF;

@@ -13,9 +13,11 @@
 
 <body>
 
-  <div class="wrapper">
-    <header class="header">
-      <div class="container">
+  <!-- Мне в голову пришел только такой способ сделать прозрачность как на макете: создать обертку с фоном-картинкой, в нем создать контейнер с прозрачным фоном и уже в нем получается сделать требуемую прозрачность шапки. Она тогда имеет 0,8 прозрачности от 0,8 контейнера.   -->
+  <div class="wrapper" style="background-image: url(images/workspace.png);">
+    <div class="container-opacity">
+
+      <header class="header">
         <div class="header__inner">
 
           <div class="header__logo">
@@ -57,134 +59,140 @@
           </form>
 
         </div>
-      </div>
-    </header>
 
-    <section class="block">
-      <div class="block__inner">
-        <div class="block__title">
-          Welcome to our company cite
+      </header>
+
+      <section class="block">
+        <div class="block__inner">
+          <div class="block__item">
+            <div class="block__title">
+              Welcome to our company cite
+            </div>
+            <div class="block__text">
+              One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
+              vermin.
+            </div>
+            <button class="block__button" type="button">Try it free</button>
+          </div>
         </div>
-        <div class="block__text">
-          One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
-          vermin.
-        </div>
-        <button class="block__button" type="button">Try it free</button>
-      </div>
-    </section>
+      </section>
+
+    </div>
   </div>
 
   <main class="main">
+
     <section class="products">
-      <div class="container">
-        <div class="products__inner">
-          <div class="products__title">
-            Our products
-          </div>
-          <a class="products__link" href="#">
-            View all products
-          </a>
-        </div>
-        <div class="products__swiper">
-          <!-- обертка создана для отображения кнопок за пределами контейнера, иначе они прячутся -->
+      <div class="products__swiper">
+        <!-- обертка создана для отображения кнопок за пределами контейнера, иначе они прячутся -->
+        <div class="swiper-container">
 
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-1.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-2.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-3.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-4.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-1.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-2.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-3.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
-              <div class="swiper-slide">
-                <a class="swiper__img" href="#">
-                  <img src="images/content/item-4.png" alt="item-1">
-                </a>
-                <a class="swiper__item-name" href="#">Macbook</a>
-                <p class="swiper__price">
-                  $ 1 499
-                </p>
-                <a class="swiper-slide__link" href="#">Buy</a>
-              </div>
-
+          <!-- Закинул этот блок в свайпер, чтобы он не вылазил за его пределы при расширении экрана -->
+          <div class="products__inner">
+            <div class="products__title">
+              Our products
             </div>
+            <a class="products__link" href="#">
+              View all products
+            </a>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-1.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-2.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-3.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-4.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-1.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-2.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-3.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="swiper__img" href="#">
+                <img src="images/content/item-4.png" alt="item-1">
+              </a>
+              <a class="swiper__item-name" href="#">Macbook</a>
+              <p class="swiper__price">
+                $ 1 499
+              </p>
+              <a class="swiper-slide__link" href="#">Buy</a>
+            </div>
+
+          </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
 
     <section class="subs">
